@@ -1,38 +1,102 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #192A56 0%, #2475B0 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.text-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  padding: 2rem 10rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subheader{
+  font-size: 1.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userSelectDiv .userCard, .recipientSelectDiv .userCard {
+  padding: 0.4rem 2rem;
+  background: #4BCFFA;
+  color: #0e2952;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.userSelectDiv .userCard:hover,  .recipientSelectDiv .userCard:hover {
+}
+.userSelectDiv,.recipientSelectDiv{
+  width: 40%;
+  margin: auto;
+  margin-top: 4%;
+}
+.chatboxContainer{
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+.chatboxContainer header{
+  background: #218F76;
+  font-size: 1.4rem;
+  padding: 0.7rem 3rem;
+}
+.chatboxContainer .conversation{
+  overflow-y: scroll;
+  background: #99AAAB;
+  color: #000;
+  padding: 0.3rem 3rem;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  width: 100%;
+  
 }
-
-.App-link {
-  color: #61dafb;
+.chatboxContainer .conversation .conversation-inner{
+  /* overflow-y: scroll; */
+  /* padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
 }
+.chatboxContainer .conversation .text-bubble{
+  background: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  width: 80%;
+  box-shadow: 0 3px 5px -3px #00000099;
+  border-radius: 9px;
+}
+.chatboxContainer .conversation .text-bubble.recipientMessage{
+  align-self: flex-end;
+  background: #bcffd1;
+}
+.typeMessage{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.typeMessage #textMessage{
+  width: 80%;
+  font-size: 1rem;
+  padding: 10px 30px;
+}
+.typeMessage #sendMessage{
+  border: navajowhite;
+  font-size: 1rem;
+  width: 20%;
+  padding: 11px;
+  background: #218F76;
+  cursor: pointer;
+  color: #fff;
 }
